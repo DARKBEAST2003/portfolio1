@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruzni</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Mohamad Ruzni</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>Hi! I’m a beginner developer passionate about web development. I love building clean and simple websites using HTML, CSS, and JavaScript. I'm currently learning new skills and building cool projects.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/share/155qVLvHQ7/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/Mohamad_Ruzni"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/alone_alone_00001?igsh=eXRzMGVrNjhwMWlo"><i class="fa-brands fa-instagram"></i></a>
+                <a href="http://www.linkedin.com/in/mohamad-ruzni-7a7aa6341/"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <a href="https://drive.google.com/file/d/1ZaWRmCebXkJ1kIhaVmASVUukE1SwZRaW/view?usp=drivesdk" class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="img2.jpg" alt="">
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img2.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Software Engineer!</h3>
+            <p> I'm Mohamad Ruzni, a 21-year-old from Vavuniya. I completed my A.L studies at Al-Hamiya M.M.V in 2023 (2024) and am currently pursuing a BIT degree at Moratuwa University. I'm passionate about technology and always eager to learn and grow in the IT field. I look forward to gaining new skills and experiences that will help shape my future career. <span id="moreText">I am a versatile tech enthusiast with a strong foundation as a Full Stack Developer, Software Developer, UI/UX Designer, Software Engineer, Cybersecurity Learner, and AI Explorer. Currently studying at the University of Moratuwa and South Eastern University, I’m passionate about building secure, intelligent, and user-friendly digital solutions. From front-end design to back-end logic, AI-powered apps to cybersecurity practices, I strive to stay ahead in technology and solve real-world problems through innovation and clean code.</span></p>
+            <button class="btn" onclick="toggleText()" id="toggleBtn">Read More</button>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>services</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Development</h3>
+                <p>We offer tailored web development solutions that bring your ideas to life. From responsive designs to robust backend systems, we build fast, secure, and user-friendly websites that help your business grow online.</p>
+                <a href="web-dev.html" class="btn">Read more</a>
+            </div>
+            <div class="services-box">
+                <i class="fa-solid fa-paintbrush"></i>
+                <h3>Graphic Design</h3>
+                <p>Our graphic design services create visually stunning and impactful designs that communicate your brand’s message clearly. From logos to marketing materials, we craft creative visuals that captivate and engage your audience.</p>
+                <a href="graphic.html" class="btn">Read more</a>
+            </div>
+            <div class="services-box">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Software Development</h3>
+                <p>We provide custom software development services to turn your ideas into powerful digital solutions. From desktop to cloud systems, we build smooth, secure, and efficient software tailored to meet your business goals.</p>
+                <a href="soft-dev.html" class="btn">Read more</a>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="img1.png" alt="">
+                <div class="portfolio-layer">
+                    <h4 class="hed">To-Do list</h4>
+                    <p>Manage your daily tasks efficiently with our easy-to-use to-do list. Stay focused, set priorities, and track progress with ease.</p>
+                    <a href="https://darkbeast2003.github.io/project-to-do/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img9.png" alt="">
+                <div class="portfolio-layer">
+                    <h4 class="hed">Portfolio</h4>
+                    <p>Explore my portfolio. A glimpse into my work — creative, functional, and tech-driven projects.</p>
+                    <a href="https://darkbeast2003.github.io/project-port/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img10.png" alt="">
+                <div class="portfolio-layer">
+                    <h4 class="hed">Calculater</h4>
+                    <p>A user-friendly calculator for accurate calculations. Designed for everyday use, it handles basic math operations with ease and clarity.</p>
+                    <a href="https://darkbeast2003.github.io/calculater/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img11.png" alt="">
+                <div class="portfolio-layer">
+                    <h4 class="hed">Login Page</h4>
+                    <p>Securely sign in to access your account and manage your personal dashboard with ease.</p>
+                    <a href="https://darkbeast2003.github.io/login/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img12.png" alt="">
+                <div class="portfolio-layer">
+                    <h4 class="hed">Flex Cards</h4>
+                    <p>Explore neatly arranged flex cards showcasing content in a clean, responsive layout. Perfect for displaying profiles with clarity.</p>
+                    <a href="https://darkbeast2003.github.io/flex-cards/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img13.png" alt="">
+                <div class="portfolio-layer">
+                    <h4 class="hed">Phone Describe</h4>
+                    <p>Discover detailed features, and specs of the latest smartphones—all in one place. Compare models and choose the right phone for your needs.</p>
+                    <a href="https://darkbeast2003.github.io/describe/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" name="" id="" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" name="" id="" placeholder="Mobile Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by DARKBEAST | All Rights Reserved</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/e7fed33d62.js" crossorigin="anonymous"></script>
+</body>
+</html>
