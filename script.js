@@ -64,3 +64,26 @@ function toggleText() {
     btn.innerText = "Read More";
   }
 }
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Get form values
+    const fullName = document.getElementById('fullName').value;
+    const emailAddress = document.getElementById('emailAddress').value;
+    const mobileNumber = document.getElementById('mobileNumber').value;
+    const emailSubject = document.getElementById('emailSubject').value;
+    const yourMessage = document.getElementById('yourMessage').value;
+
+    // Construct mailto URL
+    const recipientEmail = 'ruzni2003@gmail.com'; // Replace with your email
+    const subject = encodeURIComponent(emailSubject);
+    const body = encodeURIComponent(
+        `Name: ${fullName}\nEmail: ${emailAddress}\nPhone: ${mobileNumber}\n\nMessage:\n${yourMessage}`
+    );
+
+    const mailtoUrl = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
+
+    // Open mail client
+    window.location.href = mailtoUrl;
+});
