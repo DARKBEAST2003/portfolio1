@@ -580,3 +580,21 @@ input[type=number]::-webkit-inner-spin-button {
 .hed {
     color: var(--main-color);
 }
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  z-index: 1000;
+}
+
+.mlt-load, .mlt-load1, .mlt-load2 {
+    color: var(--text-color);
+}
