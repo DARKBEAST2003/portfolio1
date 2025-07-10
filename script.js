@@ -32,18 +32,6 @@ window.onscroll = () => {
     navbar.classList.remove("active");    
 };
 
-ScrollReveal({
-    reset: true,
-    distance: "80px",
-    duration: 1500,
-    delay: 150
-});
-
-ScrollReveal().reveal('.home-content, .heading', { origin: "top" });
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: "bottom" });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: "left" });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: "right" });
-
 const typed = new Typed(".multiple-text", {
     strings: ["Fullstack Developer", "Software Developer", "Designer", "Software Engineer", "Cyber Protecter"],
     typeSpeed: 100,
@@ -86,4 +74,38 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 
     // Open mail client
     window.location.href = mailtoUrl;
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.body.style.display = "block";
+    setTimeout(() => {
+    document.querySelector(".preloader").style.display = "none";
+    setTimeout(() => {
+    }, 1500);
+    ScrollReveal({
+    reset: true,
+    distance: "80px",
+    duration: 1500,
+    delay: 150
+    });
+    ScrollReveal().reveal('.home-content, .heading', { origin: "top" });
+    ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: "bottom" });
+    ScrollReveal().reveal('.home-content h1, .about-img', { origin: "left" });
+    ScrollReveal().reveal('.home-content p, .about-content', { origin: "right" });
+    }, 1500);
+});
+
+const typed1 = new Typed(".mlt-load", {
+    strings: ["Compiling <span>Awesome...</span>"],
+    typeSpeed: 20,
+});
+
+const typed2 = new Typed(".mlt-load1", {
+    strings: ["Please <span>Wait...</span>"],
+    typeSpeed: 20,
+});
+
+const typed3 = new Typed(".mlt-load2", {
+    strings: ["It's <span>Ruzni's</span> Universe..."],
+    typeSpeed: 20,
 });
