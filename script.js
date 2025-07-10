@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
     document.querySelector(".preloader").style.display = "none";
     setTimeout(() => {
-    }, 1500);
+    }, 1000);
     ScrollReveal({
     reset: true,
     distance: "80px",
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: "bottom" });
     ScrollReveal().reveal('.home-content h1, .about-img', { origin: "left" });
     ScrollReveal().reveal('.home-content p, .about-content', { origin: "right" });
-    }, 1500);
+    }, 1000);
 });
 
 const typed1 = new Typed(".mlt-load", {
