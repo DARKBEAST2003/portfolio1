@@ -28,7 +28,7 @@ body {
 
 section  {
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 10rem 9% 8rem 9%;
 }
 
 .header {
@@ -535,10 +535,6 @@ input[type=number]::-webkit-inner-spin-button {
 @media (max-width: 617px) {
     .portfolio-container {
         grid-template-columns: 1fr;
-    }
-
-    .contact form .input-box input {
-        width: 100%;
     }
 }
 
