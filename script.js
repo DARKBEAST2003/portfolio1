@@ -105,6 +105,18 @@ const typed2 = new Typed(".mlt-load1", {
     typeSpeed: 20,
 });
 
+const themeSwitch = document.getElementById("themeSwitch");
+const toggle = document.getElementById('themeSwitch');
+const label = document.getElementById('modeLabel');
+
+themeSwitch.addEventListener("change", () => {
+    document.body.classList.toggle("light", !themeSwitch.checked);
+});
+
+toggle.addEventListener('change', () => {
+    label.innerText = !toggle.checked ? 'LIGHT MODE' : 'DARK MODE';
+});
+
 const typed3 = new Typed(".mlt-load2", {
     strings: ["It's <span>Ruzni's</span> Universe..."],
     typeSpeed: 20,
