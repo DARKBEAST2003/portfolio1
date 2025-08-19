@@ -121,3 +121,16 @@ const typed3 = new Typed(".mlt-load2", {
     strings: ["It's <span>Ruzni's</span> Universe..."],
     typeSpeed: 20,
 });
+
+const curserOutline = document.querySelector("[data-curser-out-line]");
+
+window.addEventListener("mousemove", function(e) {
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    curserOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+    }, { duration: 100, fill: "forwards"})
+})
+
