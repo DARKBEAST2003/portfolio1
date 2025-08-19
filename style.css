@@ -13,6 +13,7 @@
     --second-bg-color: #22262f;
     --text-color: #fff;
     --main-color: rgb(1, 198, 252);
+    --curser-color: rgba(1, 198, 252, .5);
 }
 
 html {
@@ -31,6 +32,22 @@ body.light {
     --second-bg-color: #cdd3de;
     --text-color: #000000;
     --main-color: rgb(0, 111, 142);
+    --curser-color: rgba(0, 111, 142, .5);
+}
+
+.curser-out-line {
+    width: 25px;
+    height: 25px;
+    background: var(--curser-color);
+}
+
+.curser-out-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
 }
 
 section  {
@@ -784,3 +801,4 @@ input[type=number]::-webkit-inner-spin-button {
   font-size: 16px;
   font-weight: 700;
 }
+
