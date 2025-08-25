@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function() {    
+    // Setup scroll progress bar
+    setupProgressBar();
+    
+    // Setup back to top button
+    setupBackToTop();
+});
+
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
@@ -9,28 +17,53 @@ menuIcon.onclick = () => {
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
 
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute("id");
+// Setup scroll progress bar
+function setupProgressBar() {
+    window.onscroll = function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
 
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove("active");
-                document.querySelector("header nav a[href*=" + id + "]").classList.add("active");
-            });
-        };
+        sections.forEach(sec => {
+            let top = window.scrollY;
+            let offset = sec.offsetTop - 150;
+            let height = sec.offsetHeight;
+            let id = sec.getAttribute("id");
+
+            if(top >= offset && top < offset + height) {
+                navLinks.forEach(links => {
+                    links.classList.remove("active");
+                    document.querySelector("header nav a[href*=" + id + "]").classList.add("active");
+                });
+            };
+        });
+
+        let header = document.querySelector("header");
+
+        header.classList.toggle("sticky", window.scrollY > 100);
+
+        menuIcon.classList.remove("fa-xmark");
+        navbar.classList.remove("active");
+    };
+}
+
+// Setup back to top button
+function setupBackToTop() {
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('active');
+        } else {
+            backToTopBtn.classList.remove('active');
+        }
     });
-
-    let header = document.querySelector("header");
-
-    header.classList.toggle("sticky", window.scrollY > 100);
-
-    menuIcon.classList.remove("fa-xmark");
-    navbar.classList.remove("active");    
-};
+    
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
 const typed = new Typed(".multiple-text", {
     strings: ["Fullstack Developer", "Software Developer", "Designer", "Software Engineer", "Cyber Protecter"],
@@ -196,38 +229,3 @@ modal.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => { 
     if (e.key === 'Escape') closeModal(); 
 });
-
-document.addEventListener('DOMContentLoaded', function() {    
-    // Setup scroll progress bar
-    setupProgressBar();
-    
-    // Setup back to top button
-    setupBackToTop();
-});
-
-// Setup scroll progress bar
-function setupProgressBar() {
-    window.onscroll = function() {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        document.getElementById("myBar").style.width = scrolled + "%";
-    };
-}
-
-// Setup back to top button
-function setupBackToTop() {
-    const backToTopBtn = document.getElementById('backToTop');
-    
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTopBtn.classList.add('active');
-        } else {
-            backToTopBtn.classList.remove('active');
-        }
-    });
-    
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
