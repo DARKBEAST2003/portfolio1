@@ -849,11 +849,12 @@ input[type=number]::-webkit-inner-spin-button {
         top: 100%;
         right: 0;
         width: auto;
-        padding: 1rem;
+        padding: o 1rem;
         background: var(--bg-color);
         border-top: 1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         display: none;
+        border-bottom-left-radius: 1rem;
     }
 
     .navbar.active {
@@ -1284,3 +1285,4 @@ input[type=number]::-webkit-inner-spin-button {
     box-shadow: none;
 
 }
+
