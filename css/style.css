@@ -849,7 +849,7 @@ input[type=number]::-webkit-inner-spin-button {
         top: 100%;
         right: 0;
         width: auto;
-        padding: o 1rem;
+        padding: 0 1rem;
         background: var(--bg-color);
         border-top: 1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
@@ -1285,4 +1285,5 @@ input[type=number]::-webkit-inner-spin-button {
     box-shadow: none;
 
 }
+
 
