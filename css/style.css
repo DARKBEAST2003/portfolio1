@@ -579,7 +579,7 @@ button:hover {
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
-    display: flex;
+/*     display: flex; */
     height: 200px;
 }
 
@@ -1152,3 +1152,4 @@ input[type=number]::-webkit-inner-spin-button {
     border: none;
 
 }
+
