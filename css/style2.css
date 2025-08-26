@@ -543,6 +543,7 @@ footer {
   flex-direction: column;
   padding-right: 0;
   margin-right: 0;
+  z-index: 1;
 }
 
 #modeLabel {
@@ -676,4 +677,5 @@ footer {
 .portfolio-layer a i {
     font-size: 2rem;
     color: var(--second-bg-color);
+
 }
