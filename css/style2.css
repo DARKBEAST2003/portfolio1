@@ -563,7 +563,11 @@ footer {
 
 .progress-bar {
     height: 4px;
-    background: var(--main-color);
+    background: linear-gradient(90deg, #2be6ff 0%, #01c6fc 45%, #142a6e 100%);
+    background-size: 100vw 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    transition: width 0.08s linear;
     width: 0%;
 }
 
